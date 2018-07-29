@@ -9,39 +9,19 @@ import sys
 if __name__ == '__main__':
     n = int(input())
     
-    # n = 7
-    
-    binary = list()
-     
-    
-    #convert n into binary
-    while n>0:
-        remainder = n%2
-        n = int(n/2)
-        # print(n)
-        binary.insert(0,int(remainder))
-        # binary.append(remainder)
-        # print("remainder: " + str(remainder) + " n: " + str(n))
-    
-    #find longest chain of 1
-    
-    # chain = 1
-    zeropos = list()
-    onepost = list()
-    binstr = str()
-    
-    for _ in range(len(binary)):
-        # if i can get the position of 0 in the binary list, I can know what's the max chain of 1
-        if binary[_] == 1:
-            onepost.append(_)
-        binstr += str(binary[_])            
-        # print(binary[_], end="")
-    #given binary list length and position of zero
-    
-    # print(onepost)
-    for x in range()
-    
-    # maxchain = max(len(x) for x in binstr[2:].split('0')) 
-    # print(maxchain)
-    
-    # print(chain)
+    max_one_count = 0
+    one_count = 0
+
+    while n != 0:
+        factor = n // 2
+        remainder = int(n%2)
+        n = factor
+        if remainder == 1: #if remainder is 1, implies binary count
+            one_count += 1
+            max_one_count = max(max_one_count, one_count)
+        else:
+            one_count = 0
+
+    print(max_one_count) 
+
+# https://github.com/ehouarn-perret/EhouarnPerret.Python.HackerRank/blob/master/0%20-%20Tutorials/30%20Days%20of%20Code/Day%2010%20-%20Binary%20Numbers.py
