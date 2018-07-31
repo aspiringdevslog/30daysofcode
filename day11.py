@@ -10,7 +10,7 @@ import sys
 
 if __name__ == '__main__':
     arr = []
-    max = -1
+    max = -999
     count = 0
     
     for _ in range(6):
